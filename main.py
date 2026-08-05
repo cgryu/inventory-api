@@ -1,5 +1,6 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
+from auth import get_current_user_id
 import psycopg
 import os
 
@@ -33,6 +34,10 @@ def to_output(item_id: int, item: Item):
 @app.get("/")
 def read_root():
     return {"status": "ok"}
+
+@app.get("/me")
+def read_me(user_id: str = Depends(get_current_user_id)):
+    return {"user_id": user_id}
 
 @app.get("/items/{item_id}", response_model=ItemOut)
 def read_item(item_id: int):
