@@ -1,4 +1,4 @@
-# fastapi-playground
+# items-api
 
 FastAPI on-ramp — routes (path + query params), Pydantic request/response models, auto-generated docs at `/docs`.
 
