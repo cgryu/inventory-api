@@ -2,8 +2,6 @@
 
 A small but production-shaped REST API: **authenticated CRUD over PostgreSQL, deployed on Railway.** Built to practice the backend stack the way it's actually run in production — raw SQL, real token auth, a real deploy — rather than as a tutorial toy.
 
-**Live:** `inventory-api-production-f34b.up.railway.app` — interactive docs at `/docs`.
-
 ## Stack
 
 - **FastAPI** (Python) — routing and request/response validation via Pydantic
